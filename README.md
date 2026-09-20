@@ -45,10 +45,14 @@ It avoids Windows partition tools and works even if the Multitool UI’s shell i
 > On my device I did **not** need to press the hidden AV reset; Multitool booted by simply inserting the SD , only after then pugging the power in and powering on. Other boxes may require the reset.
 
 ### 2) Discover IP & SSH into Multitool
+
+**Note**: Your IP address may be different as what's stated on the example code below, it may start with, e.g. 192.168.1.x or 10.x.x.x. Otherwise you won't be able to detect the device on your network. An easier way to check is by going to your router's web interface and look for the device in there. We won't provide a tutorial, just look it up on Google or DuckDuckGo on how to do it for your specific model of router.(example: 'ZTE H3610P', or 'UBEE EVW32C'). *EDITED BY THATONEWEIRDOE(a friend of the github repo owner)*
+
 From a computer on the same LAN:
+
 ```bash
 # Adjust the subnet to match your network
-nmap -sn 192.168.100.0/24
+nmap -sn 192.168.100.0/24 
 
 ssh root@<BOX_IP>   # no password by default
 ```
